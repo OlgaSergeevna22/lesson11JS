@@ -49,6 +49,7 @@
 const person = {
     firstName: 'Olga',
     age: 29,
+    mood: 'The best all',
     address: {
         country: 'Belarus',
         city: 'Brest',
@@ -62,6 +63,6 @@ let b = 'animal';
 person[a] = 1;
 person[b] = 2;
 
-let { firstName, address: { city }, surName, animal, ...fields } = person;
+let { firstName, address: { city }, surName, animal, address: {...fields }, ...fieldsMain } = person;
 
-console.log(firstName, city, surName, animal, fields);
+console.log(firstName, city, surName, animal, fields, fieldsMain);
