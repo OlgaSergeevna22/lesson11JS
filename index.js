@@ -58,15 +58,6 @@ const person = {
     }
 }
 
-let a = 'surName';
-let b = 'animal';
-person[a] = 1;
-person[b] = 2;
 
-let { firstName, address: { city }, surName, animal, address: {...fields }, ...fieldsMain } = person;
-console.log(firstName, city, surName, animal, fields, fieldsMain);
-
-// // несовсем поняла задание, сделала 2 варианта мыслей
-
-// let { firstName, address: { city }, number1 = 1, number2 = 2, ...fields } = person;
-// console.log(firstName, city, number1, number2, fields);
+let { firstName, address: { city }, number1 = 1, number2 = 2, ...fields } = person;
+console.log(firstName, city, number1, number2, fields);
